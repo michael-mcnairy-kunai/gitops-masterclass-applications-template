@@ -16,11 +16,23 @@
 
 	"postStartCommand": "/bin/bash -c .devcontainer/scripts/post-start.sh",
 
-	"forwardPorts": [30272],
+	"forwardPorts": [30272, 30180, 30181, 30182],
 	"portsAttributes": {
 		"30272": {
 			"label": "Argo CD Dashboard",
 			"protocol": "https"
+		},
+		"30180": {
+			"label": "GOBG Dev",
+			"protocol": "http"
+		},
+		"30181": {
+			"label": "GOBG Stage",
+			"protocol": "http"
+		},
+		"30182": {
+			"label": "GOBG Prod",
+			"protocol": "http"
 		}
 	},
 	"customizations": {
