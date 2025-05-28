@@ -36,6 +36,9 @@ argocd account --insecure update-password --insecure --current-password ${argopa
 # Patch URL value. Probably can do this via helm in the "post-create.sh" script. PRs are welcome
 kubectl patch cm/argocd-cm -n argocd --type=json  -p="[{\"op\": \"replace\", \"path\": \"/data/url\", \"value\":\"https://${CODESPACE_NAME}-30080.app.github.dev\"}]" | tee -a  ~/.status.log
 
+# Update Argo CD to use cluster-admin service account for sync operations in the "default" project
+kubectl apply -f .devcontainer/manifests/argocd-configupdate.yaml | tee -a  ~/.status.log
+
 # Best effort env load
 source ~/.bashrc
 
