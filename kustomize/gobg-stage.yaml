@@ -11,7 +11,7 @@ spec:
     targetRevision: main
     path: kustomize/env/overlays/stage/
   destination:
-    namespace: stage
+    namespace: gobg-stage
     name: in-cluster
   syncPolicy:
     automated:

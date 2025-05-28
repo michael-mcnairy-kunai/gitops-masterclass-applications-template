@@ -11,7 +11,7 @@ spec:
     targetRevision: main
     path: kustomize/env/overlays/prod/
   destination:
-    namespace: prod
+    namespace: gobg-prod
     name: in-cluster
   syncPolicy:
     automated:

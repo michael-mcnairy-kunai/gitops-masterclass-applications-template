@@ -11,7 +11,7 @@ spec:
     targetRevision: main
     path: kustomize/env/overlays/dev/
   destination:
-    namespace: dev
+    namespace: gobg-dev
     name: in-cluster
   syncPolicy:
     automated:
