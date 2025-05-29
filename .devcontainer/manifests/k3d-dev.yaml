@@ -6,7 +6,7 @@ metadata:
 servers: 1
 image: rancher/k3s:v1.32.3-k3s1
 ports:
-  - port: 30080:30080
+  - port: 30179:30179
     nodeFilters:
       - server:*
   - port: 30180:30180
